@@ -20,17 +20,20 @@ def desempilhar():
     topo = pilha.pop()
     return topo
 
-'''def limpar():
-    del pilha'''
+def limpar():
+    pilha.clear()
 
 def listar():
     return pilha
 
 def vazia():
     if len(pilha) == 0:
-        return True
+        print(pilha)
+        #return True
     else:
-        return False
+        print("a lista não está vazia")
+        #return False
+
 
 while len(pilha) < 20:
     nome = input("Digite 20 nomes: ")
@@ -41,3 +44,13 @@ txt = input("Deseja remover o ultimo nome da pilha? ")
 
 if txt == "sim":
     print("O nome removido foi: ", desempilhar())
+
+txt2 = input("Deseja limpar a pilha? ")
+
+if txt2 == "sim":
+    print("a lista está vazia") 
+    print(limpar())
+    print(vazia())
+else:
+    print('confira a sua lista: ', listar())
+
