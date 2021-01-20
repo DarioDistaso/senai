@@ -1,4 +1,4 @@
-'''! SA 3 – ETAPA 2 (remover usuário)
+'''SA 3 – ETAPA 2 (remover usuário)
  Agora que você já possui uma função para buscar um usuário pelo nome, deverá, com ajuda de seus colegas, 
  implementar uma função para remover um usuário da estrutura homogênea. Para tanto, deverá buscar 
  a posição referente à estrutura homogênea pelo nome da pessoa e, caso encontre, deverá remover 
