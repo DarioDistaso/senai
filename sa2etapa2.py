@@ -12,12 +12,12 @@
 •	Toda a implementação realizada a etapa 1 deve ser mantida,
     apenas adicionando as novas configurações '''
 
-numPessoas = int(input("Quantas pessoas serão cadastradas?: "))
+numPessoas = int(input("\nQuantas pessoas serão cadastradas?: ")) # definimos aqui o tamanho da lista bidimensional de nomes e idades
 lista = []
 
-for i in range(numPessoas):
-    print("a) Cadastrar um novo usuário - b) Listar os usuários cadastrados - c) Sair do sistema: ")
-    numero = int(input("Digite 1 para cadastrar Nome e Idade e 3 para encerrar: "))
+for i in range(numPessoas): #o loop for permite a insercao de nomes e idades até que tiver posicoes disponiveis na lista
+    print("\na) Cadastrar um novo usuário - b) Listar os usuários cadastrados - c) Sair do sistema: ")
+    numero = int(input("\nDigite 1 para cadastrar Nome e Idade e 3 para encerrar: "))
     if numero == 1:
         nome = input("Digite seu nome: ")
         idade = int(input("Digite sua idade: "))
@@ -27,7 +27,7 @@ for i in range(numPessoas):
         break
     else:
         print("Número inválido")
-numero = int(input("Digite 2 para listar os nomes e as idades de todos os usuários cadastrados: "))
+numero = int(input("Digite 2 para listar os nomes e as idades de todos os usuários cadastrados: ")) #digitando 2 são mostrados todos os usuarios cadastrados (nomes e idades)
 if numero == 2:
     print(lista)
 
