@@ -1,4 +1,4 @@
-'''SA3 ETAPA 1 - TESTE: Para a implementação da função de busca de um usuário pelo nome, é necessário
+'''SA3 ETAPA 1 - TESTE: Para a implementação da função de BUSCA de um usuário pelo nome, é necessário
 implementar uma função que receba por parâmetro o nome da pessoa. Essa função irá
 verificar todas as posições da estrutura homogênea até encontrar uma que coincida
 com o nome passado por parâmetro ou até finalizar a pesquisa sem encontrar a pessoa.

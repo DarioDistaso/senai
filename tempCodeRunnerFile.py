@@ -1,1 +1,0 @@
-if numero == 1:
