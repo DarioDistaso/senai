@@ -33,11 +33,10 @@ numero = int(input("\n2) Listar os nomes e as idades de todos os usuários cadas
 
 while True:
     if numero == 2:
-        print("Nomes: ", lista_nomes)
-        print("Idades: ", lista_idades, "\n")
-        break #comando para não entrar em um loop infinito
+        for i in range(numPessoas):
+           print(lista_nomes[i], "tem", lista_idades[i], "anos")
     else:
         print("Número inválido, rode o programa novamente!\n")
-        break #comando para não entrar em um loop infinito
+    break #comando para não entrar em um loop infinito
 
 
