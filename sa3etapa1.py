@@ -7,60 +7,64 @@ caso contrário, deverá retornar -1. Além disso, deverá ser adicionado ao men
 do sistema a opção 4 – Buscar usuário pelo nome, a qual deverá solicitar o nome
 do usuário para posteriormente chamar a função.'''
 
-numPessoas = int(input("Quantas pessoas serão cadastradas? "))
-pessoas = []
-numero = int(input(" Digite: 1) Cadastrar um novo usuário 2) Listar os usuários cadastrados 3) Sair: "))
+numPessoas = int(input("\nQuantas pessoas serão cadastradas? "))
+lista_nomes = []
+lista_idades = []
 
-while numero >= 1 and numero <= 3:
-  if numero == 1:
-       nome = input("Digite o nome: ")
-       idade = int(input("Digite a idade: "))
-       pessoas.append([nome, idade])
-       if len(pessoas) < numPessoas:
-           print("Ainda tem posições disponíveis ")
-           numero = int(input(" Digite: 1) Cadastrar um novo usuário 2) Listar os usuários cadastrados 3) Sair: "))
-       else:
-           print("Não tem mais posições disponíveis")
-           numero = int(input(" Digite: 2) Listar os usuários cadastrados 3) Sair: "))
-           while numero == 1:
-               print("Não tem mais posições disponíveis: ")
-               numero = int(input( "Digite: 2) Listar os usuários cadastrados 3) Sair: "))               
-  elif numero == 2:
-       print("Nomes dos usuários cadastrados: ", pessoas)
-       break
-  elif numero == 3:
-       print("Você encerrou a aplicação")
-       break
-  else:
-       print("Número inválido")
-       
-def procuraNome (p, x):
+def procuraNome(nome):
     i = 0
-    while i < len(pessoas):
-        if pessoas[i][0] == x:
-            return i
+    while i < len(lista_nomes):
+        if lista_nomes[i] == nome:
+            print("O nome da pessoa é",nome,",a idade é ", lista_idades[i], " anos, e foi encontrada na posicao", end = " ")
+            return i #retorna a posição do nome da pessoa digitada na busca
         i += 1
-        
-    return -1
+    return -1 #caso não encontre o nome da pessoa na busca
 
-def procuraIdade (p, x):
-    i = 0
-    while i < len(pessoas):
-        if pessoas[i][0] == x:
-            return pessoas[i][1]
-        i += 1
-        
-    return -1
-    
-numero = int(input("Digite 1 para cadastrar um novo usuário - 2 para listar os usuários cadastrados - 3 para sair - 4 Buscar usuário pelo nome: "))      
-while numero == 4:
-    nome = input("Procure um usuário pelo nome ou digite SAIR para encerrar: ")
-    posicaoN = procuraNome (pessoas, nome)
-    posicaoI = procuraIdade (pessoas, nome) #procura, na lista 2D, a idade da pessoa relativa ao nome fornecido
-    if posicaoN >= 0:
-        print("O nome da pessoa é", nome, ", a idade é ", posicaoI, " anos, e foi encontrada na posicao: ", posicaoN)
-    elif nome == "SAIR":
+#o loop while permite a inserção de nomes e idades até que tiver posições disponíveis na lista
+while len(lista_nomes) < numPessoas:
+    numero = int(input("\n1) Cadastrar um novo usuário - 2) Listar os usuários cadastrados - 3) Sair do sistema: "))
+    if numero == 1:
+        nome = input("Digite seu nome: ")
+        lista_nomes.append(nome)
+        idade = int(input("Digite sua idade: "))
+        lista_idades.append(idade)
+        print("Usuário cadastrado com sucesso!")
+        print("-=-" * 20)
+    elif numero == 2:
+        print("Nomes: ", lista_nomes)
+        print("Idades: ", lista_idades)
+    elif numero == 3:
+        print("Você encerrou a aplicação")
         break
     else:
-        print("O nome da pessoa não foi encontrado")
+        print("Número inválido!")
+        
+#digitando 2 são mostrados todos os usuarios cadastrados (nomes e idades)
+numero = int(input("\n2) Listar os nomes e as idades de todos os usuários cadastrados - 4) Buscar pelo nome: - 3) Sair: ")) 
 
+while True:
+    if numero == 2:
+        for i in range(numPessoas):
+           print("\n", lista_nomes[i], "tem", lista_idades[i], "anos")
+        break
+    elif numero == 3:
+        print("Você encerrou a aplicação")
+        break
+    elif numero == 4:
+        nome = input("\nProcure um usuário pelo nome ou digite SAIR para encerrar: ")
+        posicaoN = procuraNome(nome)
+        if nome == "SAIR":
+            print("Você encerrou o programa!")
+            break
+        elif posicaoN >= 0:
+            print(posicaoN)
+        elif posicaoN == -1:
+            print("O nome da pessoa não foi encontrado")
+        else:
+            print("Número inválido, rode o programa novamente!\n")
+    else:
+        print("Número inválido, rode o programa novamente!\n")
+        break #comando para não entrar em um loop infinito
+
+
+        
