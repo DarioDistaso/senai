@@ -1,11 +1,8 @@
-'''SA3 ETAPA 1 - TESTE: Para a implementação da função de BUSCA de um usuário pelo nome, é necessário
-implementar uma função que receba por parâmetro o nome da pessoa. Essa função irá
-verificar todas as posições da estrutura homogênea até encontrar uma que coincida
-com o nome passado por parâmetro ou até finalizar a pesquisa sem encontrar a pessoa.
-Caso encontre, deverá apresentar o nome e a idade da pessoa e retornar a sua posição;
-caso contrário, deverá retornar -1. Além disso, deverá ser adicionado ao menu geral
-do sistema a opção 4 – Buscar usuário pelo nome, a qual deverá solicitar o nome
-do usuário para posteriormente chamar a função.'''
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 3 - Etapa 1: Busca pelo nome
+#Autor: Dario Distaso
+#Data atual: 22/02/2021
 
 numPessoas = int(input("\nQuantas pessoas serão cadastradas? "))
 lista_nomes = [] # lista para armazenar nomes
@@ -24,9 +21,9 @@ def procuraNome(nome): # funcao para procurar usuario pelo nome
 while len(lista_nomes) < numPessoas:
     numero = int(input("\n1) Cadastrar um novo usuário - 2) Listar os usuários cadastrados - 3) Sair do sistema: "))
     if numero == 1: # digitando 1 se cadastra um usuario
-        nome = input("Digite seu nome: ")
+        nome = input("\nDigite seu nome: ")
         lista_nomes.append(nome)
-        idade = int(input("Digite sua idade: "))
+        idade = int(input("\nDigite sua idade: "))
         lista_idades.append(idade)
         print("Usuário cadastrado com sucesso!")
         print("-=-" * 20)
@@ -39,14 +36,13 @@ while len(lista_nomes) < numPessoas:
     else:
         print("Número inválido!")
         
-
 while True:
     numero = int(input("\n2) Listar os nomes e as idades de todos os usuários cadastrados -  3) Sair - 4) Buscar pelo nome: "))
     if numero == 2:
         for i in range(numPessoas):
            print("\n", lista_nomes[i], "tem", lista_idades[i], "anos")
     elif numero == 3:
-        print("\nVocê encerrou a aplicação!")
+        print("\nVocê encerrou a aplicação!\n")
         break
     elif numero == 4:
         nome = str(input("\nProcure um usuário pelo nome: "))
@@ -56,10 +52,10 @@ while True:
         elif posicaoN == -1: # caso não for encontrado o nome digitado a funcao retorna -1 e imprime essa mensagem abaixo
             print("\nO nome da pessoa não foi encontrado")
         else:
-            print("\nNúmero inválido, rode o programa novamente!\n")
+            print("\nNúmero inválido!")
     else:
-        print("\nNúmero inválido, rode o programa novamente!\n")
-        break #comando para não entrar em um loop infinito
+        print("\nNúmero inválido!")
+        #break #comando para não entrar em um loop infinito
 
 
         

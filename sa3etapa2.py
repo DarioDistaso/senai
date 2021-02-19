@@ -1,12 +1,8 @@
-'''SA 3 – ETAPA 2 (remover usuário)
- Agora que você já possui uma função para buscar um usuário pelo nome, deverá, com ajuda de seus colegas, 
- implementar uma função para remover um usuário da estrutura homogênea. Para tanto, deverá buscar 
- a posição referente à estrutura homogênea pelo nome da pessoa e, caso encontre, deverá remover 
- essas informações da estrutura. Após realizar a remoção de uma pessoa do cadastro, deverá trazer todas 
- as informações armazenadas em posições posteriores uma posição para trás, a fim de não deixar uma posição 
- em branco entre as informações. Também deverá adicionar mais uma opção no menu: 5 – Remover usuário. 
- Após selecionar essa opção, deverá ser solicitado o nome do usuário para, caso encontrado, efetivar a 
- sua remoção da estrutura homogênea.'''
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 3 - Etapa 2: Remoção do nome
+#Autor: Dario Distaso
+#Data atual: 22/02/2021
 
 numPessoas = int(input("\nQuantas pessoas serão cadastradas? "))
 lista_nomes = [] # lista para armazenar nomes
