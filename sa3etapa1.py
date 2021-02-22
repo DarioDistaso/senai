@@ -21,7 +21,7 @@ def procuraNome(nome): # funcao para procurar usuario pelo nome
 while len(lista_nomes) < numPessoas:
     numero = int(input("\n1) Cadastrar um novo usuário - 2) Listar os usuários cadastrados - 3) Sair do sistema: "))
     if numero == 1: # digitando 1 se cadastra um usuario
-        nome = input("\nDigite seu nome: ")
+        nome = str(input("\nDigite seu nome: ")).upper()
         lista_nomes.append(nome)
         idade = int(input("\nDigite sua idade: "))
         lista_idades.append(idade)
@@ -45,7 +45,7 @@ while True:
         print("\nVocê encerrou a aplicação!\n")
         break
     elif numero == 4:
-        nome = str(input("\nProcure um usuário pelo nome: "))
+        nome = str(input("\nProcure um usuário pelo nome: ")).upper()
         posicaoN = procuraNome(nome)
         if posicaoN >= 0: # caso for encontrado o nome digitado a funcao é chamada retornado nome, idade e posicao
             print(posicaoN)
