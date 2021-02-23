@@ -24,7 +24,7 @@ def listar(): # opcao 2
         print("\n\033[0;32mA lista está vazia!\033[m")
     else:
         for i in range(len(lista_nomes)):
-            print(lista_nomes[i], "tem", lista_idades[i], "anos")
+            print("\n", lista_nomes[i], "tem", lista_idades[i], "anos")
         
 def encerrar(): # opcao 3
     print("\nVocê encerrou a aplicação!\n")
