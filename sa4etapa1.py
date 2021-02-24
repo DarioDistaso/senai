@@ -10,47 +10,75 @@ e) Vazia (retorna verdadeiro se a pilha estiver vazia, e falso caso contrário).
 Lembre-se de realizar todos os tratamentos necessários para que não aconteça o estouro da estrutura homogênea '''
 
 pilha = []
-len(pilha) == 20
 
-def empilhar(n):
-    pilha.append(n)
-    return pilha
+def empilhar(): # opção 1
+    i = 1
+    while i <= 20:
+        if len(pilha) == 20:
+            print("A pilha já está cheia!")
+            break
+        else:
+            nome = str(input(f'\nDigite o {i}° nome: '))
+            pilha.append(nome)
+            print(f'O nome inserido foi {nome}')
+        i += 1
+    print("\nOs 20 nomes digitados são: ", pilha)
 
-def desempilhar():
-    topo = pilha.pop()
-    return topo
-
-def limpar():
-    pilha.clear()
-
-def listar():
-    return pilha
-
-def vazia():
+def desempilhar(): # opção 2
     if len(pilha) == 0:
-        print(pilha)
-        #return True
+        print("A pilha está vazia!")
     else:
-        print("a lista não está vazia")
-        #return False
+        topo = pilha.pop()
+        print(f'O nome removido foi {topo}')
 
+def limpar(): # opção 3
+    if len(pilha) == 0:
+        print("A pilha já está vazia!")
+    else:
+        pilha.clear()
+        print("A pilha foi limpa!")
 
-while len(pilha) < 20:
-    nome = input("Digite 20 nomes: ")
-    lista = empilhar(nome)
-print("Os 20 nomes digitados são: ", lista)
+def listar(): # opção 4
+    if len(pilha) == 0:
+        print(f'A pilha {pilha} está vazia!')
+    else:
+        print(f'\nA pilha atual é {pilha}')
 
-txt = input("Deseja remover o ultimo nome da pilha? ")
+def vazia(): # opção 5
+    if len(pilha) == 0:
+        return True
+    else:
+        return False
 
-if txt == "sim":
-    print("O nome removido foi: ", desempilhar())
+while True:
+    print("""\n\t1 - Empilhar
+    \t2 - Desempilhar
+    \t3 - Limpar
+    \t4 - Listar
+    \t5 - A pilha está vazia?
+    \t6 - Encerrar""")
+    opcao = int(input("\nDigite uma opção: "))
+    
+    if opcao == 1:
+        empilhar()
+    
+    elif opcao == 2:
+       desempilhar()
+    
+    elif opcao == 3:
+        limpar()
+            
+    elif opcao == 4:
+        listar()
+        
+    elif opcao == 5:
+        print(vazia())
+    
+    elif opcao == 6:
+        print("\nVocê encerrou o programa!\n")
+        break
+    
+    else:
+        print("Opção inválida!")
 
-txt2 = input("Deseja limpar a pilha? ")
-
-if txt2 == "sim":
-    print("a lista está vazia") 
-    print(limpar())
-    print(vazia())
-else:
-    print('confira a sua lista: ', listar())
 

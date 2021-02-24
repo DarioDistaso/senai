@@ -47,9 +47,9 @@ def remover(): # opcao 5
         print("\n\033[0;32mA lista está vazia!\033[m")
     else: # se a lista ainda tem elementos
         nome = str(input("\nRemova um usuário pelo nome: ")).upper()
-        if nome not in lista_nomes:
+        if nome not in lista_nomes: # verifica se na lista o nome não consta
             print("Usuario inexistente!")
-        else:
+        else: # caso o nome exista na lista
             posicao = lista_nomes.index(nome)
             idade = lista_idades.pop(posicao)
             removido = lista_nomes.pop(posicao)
