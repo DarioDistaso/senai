@@ -12,17 +12,15 @@ Lembre-se de realizar todos os tratamentos necessários para que não aconteça 
 pilha = []
 
 def empilhar(): # opção 1
-    i = 1
-    while i <= 20:
-        if len(pilha) == 20:
-            print("A pilha já está cheia!")
-            break
-        else:
-            nome = str(input(f'\nDigite o {i}° nome: '))
-            pilha.append(nome)
-            print(f'O nome inserido foi {nome}')
-        i += 1
-    print("\nOs 20 nomes digitados são: ", pilha)
+
+    if len(pilha) < 20:
+        produto = str(input(f'\nDigite o produto: '))
+        pilha.append(produto)
+        print(f'O nome inserido foi {produto}')
+    
+    elif len(pilha) == 20:
+        print("A pilha já está cheia!")
+        print(f'\nOs 20 produtos cadastrados são: {pilha}')
 
 def desempilhar(): # opção 2
     if len(pilha) == 0:
@@ -46,9 +44,9 @@ def listar(): # opção 4
 
 def vazia(): # opção 5
     if len(pilha) == 0:
-        return True
+        print("A pilha está vazia")
     else:
-        return False
+        print("A pilha não está vazia")
 
 while True:
     print("""\n\t1 - Empilhar
@@ -72,7 +70,7 @@ while True:
         listar()
         
     elif opcao == 5:
-        print(vazia())
+        vazia()
     
     elif opcao == 6:
         print("\nVocê encerrou o programa!\n")
@@ -80,5 +78,7 @@ while True:
     
     else:
         print("Opção inválida!")
+    
+
 
 

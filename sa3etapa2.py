@@ -2,7 +2,7 @@
 #Professor: Lucas Naspolini Ribeiro
 #Descricao: SA 3 - Etapa 2: Remoção do nome
 #Autor: Dario Distaso
-#Data atual: 22/02/2021
+#Data atual: 01/03/2021
 
 numPessoas = int(input("\nQuantas pessoas serão cadastradas? "))
 lista_nomes = [] # lista para armazenar nomes
@@ -29,7 +29,7 @@ def listar(): # opcao 2
 def encerrar(): # opcao 3
     print("\nVocê encerrou a aplicação!\n")
 
-def buscar(): #opcao 4
+def buscar(): # opcao 4
     nome = str(input("\nProcure um usuário pelo nome: ")).upper()
     i = 0
     while i <= len(lista_nomes):
