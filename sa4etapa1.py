@@ -20,9 +20,15 @@ pilha = []
 def empilhar(): # opção 1
 
     if len(pilha) < 20:
+<<<<<<< HEAD
         produto = str(input("Digite o produto: ")).strip()
         pilha.append(produto)
         print(f'O produto inserido foi: {produto}')
+=======
+        produto = str(input(f'\nDigite o produto: '))
+        pilha.append(produto)
+        print(f'O nome inserido foi {produto}')
+>>>>>>> teste
     
     elif len(pilha) == 20:
         print("A pilha já está cheia!")
@@ -50,9 +56,15 @@ def listar(): # opção 4
 
 def vazia(): # opção 5
     if len(pilha) == 0:
+<<<<<<< HEAD
         print("A pilha está vazia!")
     else:
         print("A pilha não está vazia!")
+=======
+        print("A pilha está vazia")
+    else:
+        print("A pilha não está vazia")
+>>>>>>> teste
 
 while True:
     print("""\n\t1 - Empilhar
@@ -84,4 +96,6 @@ while True:
     
     else:
         print("Opção inválida!")
+    
+
 

@@ -13,7 +13,11 @@ def adicionar(): # opção 1
     if len(fila) < 25:
         produto = str(input(f'\nDigite o produto: '))
         fila.append(produto)
+<<<<<<< HEAD
         print(f'O produto inserido foi: {produto}')
+=======
+        print(f'O nome inserido foi {produto}')
+>>>>>>> teste
     
     elif len(fila) == 25:
         print("A fila já está cheia!")
@@ -74,4 +78,9 @@ while True:
         break
     
     else:
+<<<<<<< HEAD
         print("Opção inválida!")
+=======
+        print("Opção inválida!")
+    
+>>>>>>> teste
