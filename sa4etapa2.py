@@ -5,27 +5,26 @@ c) Limpar (remove todos os elementos da fila na ordem correta);
 d) Listar (lista todos os elementos existentes na fila);
 e) Vazia (retorna verdade se a fila estiver vazia, e falso caso contrário).
 Lembre-se de realizar todos os tratamentos necessários para que não aconteça o estouro da estrutura homogênea.'''
+
 fila = []
 
 def adicionar(): # opção 1
-    i = 1
-    while i <= 25:
-        if len(fila) == 25:
-            print("A fila já está cheia!")
-            break
-        else:
-            nome = str(input(f'\nDigite o {i}° nome: '))
-            fila.append(nome)
-            print(f'O nome inserido foi {nome}')
-        i += 1
-    print("\nOs 25 nomes digitados são: ", fila)
+
+    if len(fila) < 25:
+        produto = str(input(f'\nDigite o produto: '))
+        fila.append(produto)
+        print(f'O produto inserido foi: {produto}')
+    
+    elif len(fila) == 25:
+        print("A fila já está cheia!")
+        print(f'\nOs 20 produtos cadastrados são: {fila}')
 
 def remover(): # opção 2
     if len(fila) == 0:
         print("A fila está vazia!")
     else:
         inicio = fila.pop(0)
-        print(f'O nome removido foi {inicio}')
+        print(f'O produto removido foi: {inicio}')
 
 def limpar(): # opção 3
     if len(fila) == 0:
@@ -42,9 +41,9 @@ def listar(): # opção 4
 
 def vazia(): # opção 5
     if len(fila) == 0:
-        return True
+        print("A fila está vazia")
     else:
-        return False
+        print("A fila não está vazia")
 
 while True:
     print("""\n\t1 - Adicionar
@@ -68,7 +67,7 @@ while True:
         listar()
         
     elif opcao == 5:
-        print(vazia())
+        vazia()
     
     elif opcao == 6:
         print("\nVocê encerrou o programa!\n")

@@ -9,27 +9,31 @@ d) Listar (lista todos os elementos armazenados na pilha);
 e) Vazia (retorna verdadeiro se a pilha estiver vazia, e falso caso contrário).
 Lembre-se de realizar todos os tratamentos necessários para que não aconteça o estouro da estrutura homogênea '''
 
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 3 - Etapa 1: Busca pelo nome
+#Autor: Dario Distaso
+#Data atual: 02/03/2021
+
 pilha = []
 
 def empilhar(): # opção 1
-    i = 1
-    while i <= 20:
-        if len(pilha) == 20:
-            print("A pilha já está cheia!")
-            break
-        else:
-            nome = str(input(f'\nDigite o {i}° nome: '))
-            pilha.append(nome)
-            print(f'O nome inserido foi {nome}')
-        i += 1
-    print("\nOs 20 nomes digitados são: ", pilha)
+
+    if len(pilha) < 20:
+        produto = str(input("Digite o produto: ")).strip()
+        pilha.append(produto)
+        print(f'O produto inserido foi: {produto}')
+    
+    elif len(pilha) == 20:
+        print("A pilha já está cheia!")
+        print(f'\nOs 20 produtos cadastrados são: {pilha}')
 
 def desempilhar(): # opção 2
     if len(pilha) == 0:
         print("A pilha está vazia!")
     else:
         topo = pilha.pop()
-        print(f'O nome removido foi {topo}')
+        print(f'O produto removido foi: {topo}')
 
 def limpar(): # opção 3
     if len(pilha) == 0:
@@ -46,9 +50,9 @@ def listar(): # opção 4
 
 def vazia(): # opção 5
     if len(pilha) == 0:
-        return True
+        print("A pilha está vazia!")
     else:
-        return False
+        print("A pilha não está vazia!")
 
 while True:
     print("""\n\t1 - Empilhar
@@ -72,7 +76,7 @@ while True:
         listar()
         
     elif opcao == 5:
-        print(vazia())
+        vazia()
     
     elif opcao == 6:
         print("\nVocê encerrou o programa!\n")
@@ -80,5 +84,4 @@ while True:
     
     else:
         print("Opção inválida!")
-
 
