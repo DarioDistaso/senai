@@ -1,10 +1,8 @@
-'''Agora você deverá implementar a estrutura de Fila, lembrando que esta estrutura segue o conceito de que o primeiro a entrar é o primeiro a sair. A fila deverá ser implementada utilizando uma estrutura homogênea com 25 posições, e as seguintes funções deverão ser implementadas para a manipulação da fila:
-a) Adicionar (insere um elemento no final da fila);
-b) Remover (remove e retorna o elemento do início da fila);
-c) Limpar (remove todos os elementos da fila na ordem correta);
-d) Listar (lista todos os elementos existentes na fila);
-e) Vazia (retorna verdade se a fila estiver vazia, e falso caso contrário).
-Lembre-se de realizar todos os tratamentos necessários para que não aconteça o estouro da estrutura homogênea.'''
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 4 - Etapa 2: FILA
+#Autor: Dario Distaso
+#Data atual: 06/03/2021
 
 fila = []
 
@@ -13,15 +11,10 @@ def adicionar(): # opção 1
     if len(fila) < 25:
         produto = str(input(f'\nDigite o produto: '))
         fila.append(produto)
-<<<<<<< HEAD
         print(f'O produto inserido foi: {produto}')
-=======
-        print(f'O nome inserido foi {produto}')
->>>>>>> teste
     
     elif len(fila) == 25:
         print("A fila já está cheia!")
-        print(f'\nOs 20 produtos cadastrados são: {fila}')
 
 def remover(): # opção 2
     if len(fila) == 0:
@@ -39,7 +32,7 @@ def limpar(): # opção 3
 
 def listar(): # opção 4
     if len(fila) == 0:
-        print(f'A fila {fila} está vazia!')
+        print("A fila está vazia!")
     else:
         print(f'\nA fila atual é {fila}')
 
@@ -78,9 +71,4 @@ while True:
         break
     
     else:
-<<<<<<< HEAD
         print("Opção inválida!")
-=======
-        print("Opção inválida!")
-    
->>>>>>> teste
