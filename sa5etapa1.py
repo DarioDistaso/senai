@@ -1,6 +1,8 @@
-'''SA 5 – ETAPA 1 (Bubble Sort)
-Utilizando o algoritmo BubbleSort, você e um colega deverão implementar uma função que receba por parâmetro uma estrutura homogênea desordenada. Aplique o algoritmo de ordenação e retorne a estrutura homogênea ordenada de forma CRESCENTE.
-Resultados esperados: Código fonte com as implementações solicitadas. Critérios de avaliação: • implementar uma função que recebe uma estrutura homogênea por parâmetro e devolver esta estrutura ordenada; • implementar o algoritmo de ordenação de acordo com a especificação do bubblesort; • utilizar os comandos de repetição e decisão de forma adequada; • entregar o código fonte no prazo estabelecido. Forma de entrega: Código fonte postado em ferramenta do Ambiente Virtual de Aprendizagem (AVA)'''
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 5 - Etapa 1: BUBBLESORT
+#Autor: Dario Distaso
+#Data atual: 08/03/2021
 
 lista = []
 num = int(input("\nQuantos números quer colocar na lista? ")) 

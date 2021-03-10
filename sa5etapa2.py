@@ -1,8 +1,8 @@
-'''SA 5 – ETAPA 2 (Merge Sort)
-Utilizando o algoritmo MergeSort, você e um colega deverão implementar uma função que receba por parâmetro uma estrutura homogênea desordenada. Aplique o algoritmo de ordenação e retorne a estrutura homogênea ordenada de forma crescente. Importante: para esta etapa, é obrigatória a utilização do conceito de recursividade.
-
-Resultados esperados: Código fonte com as implementações solicitadas. Critérios de avaliação: • implementar uma função que recebe uma estrutura homogênea por parâmetro e devolve esta estrutura ordenada; • implementar o algoritmo de ordenação de acordo com a especificação do mergesort; • utilizar os comandos de repetição e decisão de forma adequada; • entregar o código fonte no prazo estabelecido. Forma de entrega: Código fonte entregue ao professor no momento presencial.'''
-
+#Disciplina: [Logica de Programacao]
+#Professor: Lucas Naspolini Ribeiro
+#Descricao: SA 5 - Etapa 2: MERGESORT
+#Autor: Dario Distaso
+#Data atual: 08/03/2021
 
 
 def mergesort(lista):
